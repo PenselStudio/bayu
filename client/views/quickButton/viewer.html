@@ -1,0 +1,47 @@
+<template name='quickButtonView'>
+  {{#each button}}
+  <div class='view'>
+    <span class='title'>
+      Quick Button Details
+    </span>
+    <ol>
+      <li>
+        <span>
+          Display Text
+        </span>
+        <span class='info'>
+          {{displayText}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Item
+        </span>
+        <span class='info'>
+          {{getItemName item}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Quick Category
+        </span>
+        <span class='info'>
+          {{getQuickCatName quickCategory}}
+        </span>
+      </li>
+    </ol>
+
+    <button id="editButton">Edit Details</button>
+    <button id="deleteButton">Delete Item</button>
+  </div>
+  {{/each}}
+  {{>quickButtonOperation}}
+  <div id='veil'>
+  </div>
+</template>
+
+<template name='quickButtonOperation'>
+  <div id='itemOperation'>
+    {{>templateHolder}}
+  </div>
+</template>

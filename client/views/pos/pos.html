@@ -1,0 +1,247 @@
+<template name="posBoard">
+ {{>navi}}
+ {{>awesomeBar}}
+ {{>list}}
+ {{>menu}}
+ {{>keypad}}
+ {{>payment}}
+ {{>itemInBasket}}
+</template>
+
+<template name="navi">
+  <div class='navi'>
+    <div class='logo'>
+      bayu
+    </div>
+    <div class='user'>
+      {{currentUser.profile.firstName}} {{currentUser.profile.lastName}}
+    </div>
+    <div class='clock'>
+      {{currentTime}}
+    </div>
+  </div>
+</template>
+
+<template name="awesomeBar">
+	<div class='awesome' >
+		<div class='input'>
+			<input type='text' id='inputTxt' value='{{inputStream}}'/>
+			<input type='button' id='addManualBtn' value="Manual"/>
+		</div>
+    {{>quickSelect}}
+		<div class='transaction'>
+		  <button class='confirm'>
+		  	Accept
+		  </button>
+		  <button class='cancel'>
+		  	Cancel
+		  </button>
+    	</div>
+	</div>
+</template>
+
+<template name="quickSelect">
+  <ol class='quickCat'>
+    {{#each quickCat}}
+    <li><a href='' id='{{_id}}' class='linkButton'>{{desc}}</a></li>
+    {{/each}}
+  </ol>
+  <div class='quickSelect'>
+    {{#each quickButtons}}
+    <button class='button'>
+      {{displayText}}
+    </button>
+    {{/each}}
+  </div>
+</template>
+
+<template name="list">
+   <div class='list'>
+     <div class='total'>
+       Total : RM{{grandTotal}}
+     </div>
+     {{#each bucket}}
+     <div class='item'>
+	   <div class='desc'>
+         {{desc}}
+       </div>
+       <div class='barcode'>
+       	 {{barcode}}
+       </div>
+	   <div class='vol'>
+		 RM{{price}}
+	   </div>
+       <div class='vol'>
+         {{vol}}
+       </div>
+       <div class='lineTotal'>
+         RM{{calculateTotal vol price}}
+       </div>
+     </div>
+     {{/each}}
+   </div>
+   <div class='assistDisplay'>
+     <span class='title'>
+       TOTAL
+     </span>
+     <span class='main'>
+       RM{{grandTotal}}
+     </span>
+   </div>
+</template>
+
+<template name="menu">
+  <div class="menu">
+    <button class="menuBtn" id="assistBtn">
+      Assistive Display
+    </button>
+    <button class="menuBtn" id='endShiftBtn'>
+      End Shift
+    </button>
+    <button class="menuBtn">
+      Transactions
+    </button>
+    <button class='menuBtn' id='keypadBtn'>
+      Keypad
+    </button>
+  </div>
+</template>
+
+<template name="payment">
+  <div class="posVeil">
+  </div>
+
+  <div class="payment">
+    <span>
+      Confirm Transaction
+    </span>
+    <div class='info'>
+      <table>
+        <tr>
+          <td>
+            Total Amount
+          </td>
+          <td class='number'>
+            {{totalAmount}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Given Amount
+          </td>
+          <td>
+            <input type='text' id='givenTxt'/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Change
+          </td>
+          <td class='number'>
+            {{change}}
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class='quickNotes'>
+      {{#each quickNotes}}
+        <button value="{{value}}" class='quickNoteButton'>{{displayText}}</button>
+      {{/each}}
+    </div>
+
+    <div class='action'>
+      <button id='okBtn'>OK</button>
+      <button id='cancelBtn'>Cancel</button>
+    </div>
+  </div>
+</template>
+
+<template name='itemInBasket'>
+  <div class="posVeil">
+  </div>
+
+  <div class='itemInBasket'>
+	<span>
+		Adjust Volume for {{itemBarcode}}
+	</span>
+	<div class='info'>
+		<table>
+		  <tr>
+			<td>
+			  Current Quantity
+			</td>
+			<td  class='number'>
+			  {{currentQuantity}}
+			</td>
+		  </tr>
+		  <tr>
+			<td>
+			  New Quantity
+			</td>
+			<td>
+			  <input type='text' id='newQuantity'>
+			</td>
+		  </tr>
+		</table>
+	</div>
+	<div class='action'>
+        <button id='okBtn'>OK</button>
+        <button id='cancelBtn'>Cancel</button>
+    </div>
+  </div>
+
+
+</template>
+
+<template name="keypad">
+  <div class="onscreenControl" id='onscreenCtrl'>
+	  <div class="keypad">
+	    <button class='clear'>
+	      CL
+	    </button>
+	    <button class='delete'>
+	      Delete
+	    </button>
+		<button class='numericPad'>
+		  7
+		</button>
+		<button class='numericPad'>
+		  8
+		</button>
+		<button class='numericPad'>
+		  9
+		</button>
+		<button class='numericPad'>
+		  4
+		</button>
+		<button class='numericPad'>
+		  5
+		</button>
+		<button class='numericPad'>
+		  6
+		</button>
+		<button class='numericPad'>
+		  1
+		</button>
+		<button class='numericPad'>
+		  2
+		</button>
+		<button class='numericPad'>
+		  3
+		</button>
+		<button class='numericPad'>
+		  0
+		</button>
+		<button class='numericPad'>
+		  .
+		</button>
+		<button class='numericPad'>
+		  OK
+		</button>
+	  </div>
+	  <button class='hide'>
+	  	Hide
+	  </button>
+  </div>
+</template>

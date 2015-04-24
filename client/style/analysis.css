@@ -1,0 +1,108 @@
+.appTitle{
+    font-size:100%;
+    font-weight:bold;
+    color:forestgreen;
+    display:block;
+    margin-top:2%;
+}
+
+
+.graphFilter{
+    width:90%;
+    /*font-size:70%;*/
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    background-color:#EFF2FB;
+    overflow:auto;
+    margin-top:1%;
+    margin-bottom:1%;
+}
+
+.graphFilter span{
+    font-size:90%;
+    font-weight:bold;
+    float:left;
+    color:#045FB4;
+    margin-top:1%;
+    margin-left:1%;
+}
+
+.graphFilter div.type{
+    margin-left:1%;
+    font-size:70%;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    width:30%;
+    float:left;
+    clear:both;
+    margin-top:5px;
+}
+
+.graphFilter div.type ol{
+    -moz-column-count: 2;
+    -moz-column-gap: 15px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 15px;
+    column-count: 2;
+    column-gap: 15px;
+    clear:both;
+    float:left;
+    list-style-type:none;
+    margin: 0 0 0 1%;
+    padding: 0 0 2% 0;
+}
+
+.graphFilter div.type ol li{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.graphFilter div.keyInput{
+    width:50%;
+    overflow:auto;
+    float:left;
+    text-align:center;
+    margin-top:5px;
+}
+
+.graphFilter div.keyInput input[type='text']{
+    font-size:80%;
+    float:left;
+    width:90%;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    border:1px solid #BDBDBD;
+}
+
+.graphFilter div.keyInput div#range input[type='text']{
+    font-size:80%;
+    float:left;
+    width:30%;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    border:1px solid #BDBDBD;
+}
+
+.graphFilter div.keyInput div#range span{
+    margin: 0 2% 0 2%;
+    font-size:80%;
+}
+
+.graphFilter div.keyInput select{
+    font-size:80%;
+    float:left;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    border:1px solid #BDBDBD;
+}
+
+.graphFilter div.go{
+    float:left;
+    width:18%;
+    text-align:center;
+    margin-top:5px;
+}
+
+.graphFilter div.go button{
+    font-size:80%;
+    float:left;
+}
+
+.dataGraph{
+    width:100%;
+}

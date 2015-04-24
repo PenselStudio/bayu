@@ -1,0 +1,81 @@
+<template name='test'>
+	<div>	
+		<fieldset>
+		    <legend>
+		        User
+		    </legend>
+		    Username
+		    <input id='usernameTxt' type='text'/>
+		    Email
+		    <input id='emailTxt' type='text'/>
+		    Password
+		    <input id='passwordTxt' type='text'/>
+		    <input id='userBtn' type='button' value='add user'/>
+		</fieldset>
+	</div>
+	<div>	
+		<fieldset>
+		    <legend>
+		        Item
+		    </legend>
+		   	Barcode
+		    <input id='itemBarcodeTxt' type='text'/>
+		    Desc
+		    <input id='itemDescTxt' type='text'/>
+		    Price
+		    <input id='itemPriceTxt' type='text'/>
+		    Category
+		    <!--
+		    <input id='itemCatTxt' type='text'/>
+		    -->
+		    <select id='itemCat'>
+		    {{#each category}}
+		      <option value={{_id}}>{{name}}</option>
+		    {{/each}}
+		    </select>
+		    <input id='itemBtn' type='button' value='add item'/>
+		</fieldset>
+	</div>
+	<div>        
+        <fieldset>
+            <legend>
+                Category
+            </legend>
+            Name
+            <input id='catNameTxt' type='text'/>
+            Desc
+            <input id='catDesc' type='text'/>
+            <input id='catBtn' type='button' value='add category'/>
+        </fieldset>
+    </div>
+	<div>        
+        <fieldset>
+            <legend>
+                Quickcategory
+            </legend>
+            Name
+            <input id='quickCatNameTxt' type='text'/>
+            Desc
+            <input id='quickCatDesc' type='text'/>
+            <input id='quickCatBtn' type='button' value='add quickcategory'/>
+        </fieldset>
+    </div>
+    <div>       
+        <fieldset>
+            <legend>
+                Quickbutton
+            </legend>
+            Item
+            <input id='quickItemTxt' type='text'/>
+            Display Text
+            <input id='quickDispTxt' type='text'/>
+            Quickcategory
+            <select id='quickBtnCat'>
+		    {{#each quickCategory}}
+		      <option value={{_id}}>{{name}}</option>
+		    {{/each}}
+		    </select>
+            <input id='quickDispBtn' type='button' value='add quickbutton'/>
+        </fieldset>
+    </div>
+</template>

@@ -1,0 +1,33 @@
+<template name='salesTrend'>
+    <span class="appTitle">
+        Sales Trend
+    </span>
+    <div class='graphFilter'>
+        <span>
+            Time Period
+        </span>
+        <div class='type'>
+            <ol>
+                <li><input type='radio' name='filterType' value='date'>Daily</li>
+                <li><input type='radio' name='filterType' value='month'>Monthly</li>
+                <li><input type='radio' name='filterType' value='year'>Yearly</li>
+            </ol>
+        </div>
+        <div class='keyInput'>
+            <div id='range'>
+                <span>Start</span>
+                <input type='text' id='startDate'>
+                <span>End</span>
+                <input type='text' id='endDate'>
+            </div>
+        </div>
+        <div class='go'>
+            <button id='generateBtn'>
+                Generate Graph
+            </button>
+        </div>
+    </div>
+    <div class='dataGraph'>
+        <canvas id="theChart"></canvas>
+    </div>
+</template>

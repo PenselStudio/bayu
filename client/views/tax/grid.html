@@ -1,0 +1,55 @@
+<template name='taxGrid'>
+   <div class='gridFilter'>
+     <span>
+       Filter
+    </span>
+    <div class='type'>
+      <ol>
+        <li><input type='radio' name='filterType' value='desc'>Code</li>
+        <li><input type='radio' name='filterType' value='barcode'>Description</li>
+        <li><input type='radio' name='filterType' value='supplier'>Value</li>
+      </ol>
+    </div>
+    <div class='keyInput'>
+      <input type='text' id='filterKey'>
+    </div>
+    <div class='go'>
+      <button id='filterBtn'>
+        Filter
+      </button>
+      <button id='clearBtn'>
+        Clear Filter
+      </button>
+    </div>
+   </div>
+   <div class='dataGrid'>
+     <table>
+       <thead>
+         <tr>
+           <th>
+             Code
+           </th>
+           <th>
+             Description
+           </th>
+           <th>
+             Value
+           </th>
+         </tr>
+       </thead>
+       {{#each taxes}}
+       <tr>
+         <td>
+           <a href='' class='link'>{{code}}</a>
+         </td>
+         <td>
+           {{desc}}
+         </td>
+         <td>
+           {{value}}
+         </td>
+       </tr>
+       {{/each}}
+     </table>
+   </div>
+</template>

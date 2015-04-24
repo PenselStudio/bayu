@@ -1,0 +1,40 @@
+.loginForm{
+  position:absolute;
+  width:45%;
+  top:30%;
+  right:2%;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  background-color:rgba(223,231,239,1.0);
+  padding: 1% 0.5% 1% 0.5%;
+}
+
+.loginForm span{
+  font-size:90%;
+  float:right;
+}
+
+.loginForm input[type='text']{
+  font-size:80%;
+  margin:0 1% 0 1%;
+  border:1px solid #BDBDBD;
+  float:right;
+}
+
+.loginForm input[type='password']{
+  font-size:80%;
+  margin:0 1% 0 1%;
+  border:1px solid #BDBDBD;
+  float:right;
+}
+
+.loginForm button{
+  font-size:80%;
+  float:right;
+  margin: 0 0 0 0;
+}
+
+.loginBackground{
+  position:absolute;
+  z-index:1;
+  background:red;
+}

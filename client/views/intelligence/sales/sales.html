@@ -1,0 +1,26 @@
+<template name='salesIntel'>
+  {{>adminNavi}}
+  {{>salesIntelApp}}
+  {{>intelMenu}}
+  {{>salesIntelSubmenu}}
+</template>
+
+<template name='salesIntelSubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Sales
+    </span>
+    <button id='reportBtn'>
+      Report
+    </button>
+    <button id='trendBtn'>
+      Trend
+    </button>
+  </div>
+</template>
+
+<template name='salesIntelApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

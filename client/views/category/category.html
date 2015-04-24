@@ -1,0 +1,28 @@
+<template name='categoryAdmin'>
+  {{>adminNavi}}
+  {{>categoryApp}}
+  {{>moduleMenu}}
+  {{>categorySubmenu}}
+  <!--
+  {{>itemList}}-->
+</template>
+
+<template name='categorySubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Category Management
+    </span>
+    <button id='addNew'>
+      Add New Category
+    </button>
+    <button id='grid'>
+      View Categories
+    </button>
+  </div>
+</template>
+
+<template name='categoryApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

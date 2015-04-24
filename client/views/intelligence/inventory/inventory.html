@@ -1,0 +1,23 @@
+<template name='inventoryIntel'>
+  {{>adminNavi}}
+  {{>inventoryApp}}
+  {{>intelMenu}}
+  {{>inventorySubmenu}}
+</template>
+
+<template name='inventorySubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Inventory
+    </span>
+    <button id='itemMvmtBtn'>
+      Items Movement
+    </button>
+  </div>
+</template>
+
+<template name='inventoryApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

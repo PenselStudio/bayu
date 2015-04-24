@@ -1,0 +1,28 @@
+<template name='userAdmin'>
+  {{>adminNavi}}
+  {{>userApp}}
+  {{>moduleMenu}}
+  {{>userSubmenu}}
+  <!--
+  {{>itemList}}-->
+</template>
+
+<template name='userSubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Users Management
+    </span>
+    <button id='addNew'>
+      Add New User
+    </button>
+    <button id='grid'>
+      View Users
+    </button>
+  </div>
+</template>
+
+<template name='userApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>
