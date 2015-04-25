@@ -1,0 +1,3 @@
+Template.profitIntel.rendered = function(){
+  
+}
