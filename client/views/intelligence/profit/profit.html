@@ -1,2 +1,26 @@
 <template name='profitIntel'>
+  {{>adminNavi}}
+  {{>salesIntelApp}}
+  {{>intelMenu}}
+  {{>salesIntelSubmenu}}
+</template>
+
+<template name='profitIntelSubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Sales
+    </span>
+    <button id='reportBtn'>
+      Report
+    </button>
+    <button id='trendBtn'>
+      Trend
+    </button>
+  </div>
+</template>
+
+<template name='profitIntelApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
 </template>
