@@ -35,4 +35,5 @@ Router.map(function(){
 	//BI
 	this.route('inventoryIntel', {path : '/analysis/inventory'});
 	this.route('salesIntel', {path : '/analysis/sales'});
+	this.route('profitIntel', {path : '/analysis/profit'});
 });
