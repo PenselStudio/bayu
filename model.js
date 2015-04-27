@@ -28,5 +28,42 @@ if(Meteor.isServer){
   Shifts._ensureIndex({'shiftId':1}, {unique:1});
   Sales._ensureIndex({'salesId':1}, {unique:1});
   Adjustments._ensureIndex({'adjustId':1}, {unique:1});
-  Receivings._ensureIndex({'receiveId':1}, {unique:1});  
+  Receivings._ensureIndex({'receiveId':1}, {unique:1});
+
+
+  //Allow/Deny
+  //Data controls/restrictions from the clientside
+  var adminPermission = {
+    insert: function(userId, doc){
+      var user = Meteor.users.findOne({_id: userId});
+      return (userId && user.privilege === 'admin');
+    },
+    update: function(userId, doc, fields, modifier){
+      var user = Meteor.users.findOne({_id: userId});
+      return (userId && user.privilege === 'admin');
+    },
+    remove: function(userId, doc){
+      var user = Meteor.users.findOne({_id: userId});
+      return (userId && user.privilege === 'admin');
+    }
+  }
+
+  Items.allow(adminPermission);
+  Quickbuttons.allow(adminPermission);
+  Quickcategories.allow(adminPermission);
+  Quicknotes.allow(adminPermission);
+  Shifts.allow(adminPermission);
+  Transactions.allow(adminPermission);
+  Suppliers.allow(adminPermission);
+  Categories.allow(adminPermission);
+  Units.allow(adminPermission);
+  Batches.allow(adminPermission);
+  Receivings.allow(adminPermission);
+  Adjustments.allow(adminPermission);
+  Sales.allow(adminPermission);
+  Settings.allow(adminPermission);
+  Devices.allow(adminPermission);
+  Counters.allow(adminPermission);
+  Taxes.allow(adminPermission);
+
 }
