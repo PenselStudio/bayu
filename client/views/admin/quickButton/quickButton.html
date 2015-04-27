@@ -1,0 +1,28 @@
+<template name='quickButtonAdmin'>
+  {{>adminNavi}}
+  {{>quickButtonApp}}
+  {{>moduleMenu}}
+  {{>quickButtonSubmenu}}
+  <!--
+  {{>itemList}}-->
+</template>
+
+<template name='quickButtonSubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Quickbutton
+    </span>
+    <button id='addNew'>
+      Add New Quick Button
+    </button>
+    <button id='grid'>
+      View Quick Button
+    </button>
+  </div>
+</template>
+
+<template name='quickButtonApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

@@ -1,0 +1,28 @@
+<template name='supplierAdmin'>
+  {{>adminNavi}}
+  {{>supplierApp}}
+  {{>moduleMenu}}
+  {{>supplierSubmenu}}
+  <!--
+  {{>itemList}}-->
+</template>
+
+<template name='supplierSubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Supplier Management
+    </span>
+    <button id='addNew'>
+      Add New Supplier
+    </button>
+    <button id='grid'>
+      View Suppliers
+    </button>
+  </div>
+</template>
+
+<template name='supplierApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

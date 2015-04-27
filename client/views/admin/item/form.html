@@ -1,0 +1,83 @@
+<template name='itemForm'>
+  <div class='form'>
+    <span class='title'>
+      {{itemFormTitle}}
+    </span>
+    <ol>
+      <li>
+        <span>
+          Barcode
+        </span>
+        <input type='text' id='barcode'/>
+      </li>
+      <li>
+        <span>
+          Description
+        </span>
+        <input type='text' id='desc'/>
+      </li>
+      <li>
+        <span>
+          Supplier
+        </span>
+        <select id='supplier'>
+			{{#each suppliers}}
+			  <option value={{code}}>{{desc}}</option>
+			{{/each}}
+	    </select>
+      </li>
+      <li>
+        <span>
+          Category
+        </span>
+        <select id='category'>
+			{{#each categories}}
+			  <option value={{code}}>{{desc}}</option>
+			{{/each}}
+	    </select>
+      </li>
+      <li>
+        <span>
+          Stock On Hand
+        </span>
+        <input type='text' id='stock'/>
+      </li>
+      <li>
+        <span>
+          Cost
+        </span>
+        <input type='text' id='cost'/>
+      </li>
+      <li>
+        <span>
+          Price
+        </span>
+        <input type='text' id='price'/>
+      </li>
+      <li>
+        <span>
+          Unit
+        </span>
+        <select id='unit'>
+			{{#each units}}
+			  <option value={{code}}>{{desc}}</option>
+			{{/each}}
+	    </select>
+      </li>
+      <li>
+        <span>
+          Lead Time
+        </span>
+        <input type='text' id='leadTime'/>
+      </li>
+    </ol>
+
+ 	<input id="cancelButton" value="Cancel" type="button"/>
+
+ 	{{#if insertMode}}
+  	<input id="addButton" value="Add" type="button"/>
+  	{{else}}
+    <input id="saveButton" value="Save Changes" type="button"/>
+    {{/if}}
+  </div>
+</template>

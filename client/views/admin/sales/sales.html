@@ -1,0 +1,25 @@
+<template name='salesAdmin'>
+  {{>adminNavi}}
+  {{>salesApp}}
+  {{>moduleMenu}}
+  {{>salesSubmenu}}
+  <!--
+  {{>itemList}}-->
+</template>
+
+<template name='salesSubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Sales
+    </span>
+    <button id='grid'>
+      View Sales
+    </button>
+  </div>
+</template>
+
+<template name='salesApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

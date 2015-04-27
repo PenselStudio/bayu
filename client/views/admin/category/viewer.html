@@ -1,0 +1,39 @@
+<template name='categoryView'>
+  {{#each category}}
+  <div class='view'>
+    <span class='title'>
+      Category Details
+    </span>
+    <ol>
+      <li>
+        <span>
+          Code
+        </span>
+        <span class='info'>
+          {{code}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Description
+        </span>
+        <span class='info'>
+          {{desc}}
+        </span>
+      </li>
+    </ol>
+
+    <button id="editButton">Edit Details</button>
+    <button id="deleteButton">Delete Item</button>
+  </div>
+  {{/each}}
+  {{>categoryOperation}}
+  <div id='veil'>
+  </div>
+</template>
+
+<template name='categoryOperation'>
+  <div id='itemOperation'>
+    {{>templateHolder}}
+  </div>
+</template>

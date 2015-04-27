@@ -1,0 +1,47 @@
+<template name='taxView'>
+  {{#each tax}}
+  <div class='view'>
+    <span class='title'>
+      Tax Details
+    </span>
+    <ol>
+      <li>
+        <span>
+          Code
+        </span>
+        <span class='info'>
+          {{code}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Description
+        </span>
+        <span class='info'>
+          {{desc}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Value
+        </span>
+        <span class='info'>
+          {{value}}
+        </span>
+      </li>
+    </ol>
+
+    <button id="editButton">Edit Details</button>
+    <button id="deleteButton">Delete Item</button>
+  </div>
+  {{/each}}
+  {{>taxOperation}}
+  <div id='veil'>
+  </div>
+</template>
+
+<template name='taxOperation'>
+  <div id='itemOperation'>
+    {{>templateHolder}}
+  </div>
+</template>

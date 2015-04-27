@@ -1,0 +1,55 @@
+<template name='unitView'>
+  {{#each unit}}
+  <div class='view'>
+    <span class='title'>
+      Unit Details
+    </span>
+    <ol>
+      <li>
+        <span>
+          Code
+        </span>
+        <span class='info'>
+          {{code}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Description
+        </span>
+        <span class='info'>
+          {{desc}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Base Unit
+        </span>
+        <span class='info'>
+          {{baseUnit}}
+        </span>
+      </li>
+      <li>
+        <span>
+          Volume
+        </span>
+        <span class='info'>
+          {{volume}}
+        </span>
+      </li>
+    </ol>
+
+    <button id="editButton">Edit Details</button>
+    <button id="deleteButton">Delete Item</button>
+  </div>
+  {{/each}}
+  {{>unitOperation}}
+  <div id='veil'>
+  </div>
+</template>
+
+<template name='unitOperation'>
+  <div id='itemOperation'>
+    {{>templateHolder}}
+  </div>
+</template>

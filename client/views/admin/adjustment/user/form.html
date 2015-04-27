@@ -1,0 +1,58 @@
+<template name='userForm'>
+  <div class='form'>
+    <span class='title'>
+      {{formTitle}}
+    </span>
+    <ol>
+      <li>
+        <span>
+          Username
+        </span>
+        <input type='text' id='username'/>
+      </li>
+      <li>
+        <span>
+          Password
+        </span>
+        <input type='password' id='password'/>
+      </li>
+      <li>
+        <span>
+          Verify Password
+        </span>
+        <input type='password' id='verifyPassword'/>
+      </li>
+      <li>
+        <span>
+          Email
+        </span>
+        <input type='text' id='email'/>
+      </li>
+      <li>
+        <span>
+          First Name
+        </span>
+        <input type='text' id='firstName'/>
+      </li>
+      <li>
+        <span>
+          Last Name
+        </span>
+        <input type='text' id='lastName'/>
+      </li>
+      <li>
+        <span>
+          Privilege
+        </span>
+        <select id='privilege'>
+          <option value='operator'>Operator</option>
+          <option value='analyst'>Analyst</option>
+          <option value='admin'>Admin</option>
+        </select>
+      </li>
+    </ol>
+
+   <input id="cancelButton" value="Cancel" type="button"/>
+   <input id="addButton" value="Add" type="button"/>  
+  </div>
+</template>
