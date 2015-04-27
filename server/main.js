@@ -17,6 +17,12 @@ if (Meteor.isServer) {
         'value' : 'RM'
       };
       Settings.insert(obj);
+
+      var obj = {
+        'key' : 'currencyName',
+        'value' : 'Ringgit Malaysia'
+      };
+      Settings.insert(obj);
     }
 
     //Create default admin

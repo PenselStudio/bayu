@@ -30,10 +30,12 @@ Router.map(function(){
 	this.route('deviceAdmin', {path : '/admin/device'});
 	this.route('userAdmin', {path : '/admin/user'});
 	this.route('taxAdmin', {path : '/admin/tax'});
+	this.route('currencyAdmin', {path : '/admin/currency'});
 	this.route('login', {path : '/'});
 
 	//BI
 	this.route('inventoryIntel', {path : '/analysis/inventory'});
 	this.route('salesIntel', {path : '/analysis/sales'});
 	this.route('profitIntel', {path : '/analysis/profit'});
+
 });
