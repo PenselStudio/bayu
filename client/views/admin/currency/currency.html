@@ -1,0 +1,28 @@
+<template name='currencyAdmin'>
+  {{>adminNavi}}
+  {{>currencyApp}}
+  {{>moduleMenu}}
+  {{>currencySubmenu}}
+  <!--
+  {{>itemList}}-->
+</template>
+
+<template name='currencySubmenu'>
+  <div class='submenu'>
+    <span class='section'>
+      Currency Management
+    </span>
+    <button id='prefix'>
+      Currency Name and Prefix
+    </button>
+    <button id='denom'>
+      Currency Denominator
+    </button>
+  </div>
+</template>
+
+<template name='currencyApp'>
+  <div class='app'>
+    {{>templateHolder}}
+  </div>
+</template>

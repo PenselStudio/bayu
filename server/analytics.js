@@ -76,8 +76,6 @@ Meteor.methods({
  //TODO: Parameterization of the darned db server
  var asyncDataFunc = Meteor.wrapAsync(getDailySalesTrendData);
  var result = asyncDataFunc(startDate,endDate);
- console.log('SHIT');
- console.log(result);
  return result;
  }
 

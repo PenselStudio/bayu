@@ -44,6 +44,10 @@ Template.moduleMenu.events ={
     Router.go('/admin/tax');
   },
 
+  'click button#currencyBtn' : function(event){
+    Router.go('/admin/currency');
+  },
+
   'click button#deviceBtn' : function(event){
     Router.go('/admin/device');
   },
